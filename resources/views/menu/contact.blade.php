@@ -1,6 +1,6 @@
 @extends('layouts.master')
     @section('title')
-        Halaman Post
+        Halaman Contact
     @endsection
         @section('content')
             <!DOCTYPE html>

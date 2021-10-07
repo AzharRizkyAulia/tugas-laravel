@@ -27,3 +27,9 @@ Route::get('about', function () {
 Route::get('contact', function () {
     return view('menu.contact');
 });
+
+Route::prefix('admin')->group(function (){
+    Route::get('/',function(){
+        return view('admin.index');
+    });
+});
