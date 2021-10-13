@@ -1,4 +1,7 @@
 @extends('layouts.admin')
 @section('content')
-    <h1 class="ml-3">Yahallose</h1>
+    <h3 class="ml-3">Halaman Index <br>
+        Nama Depan : {{$depan}} <br>
+        Nama Belakang : {{$belakang}}
+</h1>
 @endsection
