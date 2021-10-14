@@ -3,18 +3,17 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Book;
 
 class BookController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+
     public function index()
     {
-        $judul = 'Senja Senja Yang menyelimuti Dada';
-        return view('book.index', compact('judul'));
+        $book = Book::all();
+        return view('book.index', compact('book'));
+        // $judul = 'Hujan dan Air Mata';
+        // return view('book.index', compact('judul'));
     }
 
     /**
