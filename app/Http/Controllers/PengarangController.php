@@ -2,21 +2,19 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\pengarang;
 use Illuminate\Http\Request;
-use App\Models\Book;
-use App\Models\Pengarang;
 
-
-class BookController extends Controller
+class PengarangController extends Controller
 {
-
+    /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
     public function index()
     {
-        $book = Book::all();
-        $pengarang = Pengarang::all();
-        return view('book.index', compact('book', 'pengarang'));
-        // $judul = 'Hujan dan Air Mata';
-        // return view('book.index', compact('judul'));
+        //
     }
 
     /**
@@ -26,8 +24,7 @@ class BookController extends Controller
      */
     public function create()
     {
-        $judul = 'Senja Senja Yang menyelimuti Dada';
-        return view('book.create', compact('judul'));
+        //
     }
 
     /**
@@ -44,35 +41,33 @@ class BookController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
+     * @param  \App\Models\pengarang  $pengarang
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(pengarang $pengarang)
     {
-        return view('admin.show', compact('id'));                
+        //
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  int  $id
+     * @param  \App\Models\pengarang  $pengarang
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(pengarang $pengarang)
     {
-        $depan = 'Azhar';
-        $belakang = 'Rizky';
-        return view('admin.edit', compact('depan','belakang'));
+        //
     }
 
     /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
+     * @param  \App\Models\pengarang  $pengarang
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, pengarang $pengarang)
     {
         //
     }
@@ -80,10 +75,10 @@ class BookController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int  $id
+     * @param  \App\Models\pengarang  $pengarang
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(pengarang $pengarang)
     {
         //
     }
