@@ -14,7 +14,8 @@ class PengarangController extends Controller
      */
     public function index()
     {
-        //
+        $pengarang = Pengarang::all();
+        return view('pengarang.index', compact('pengarang'));        
     }
 
     /**
@@ -24,7 +25,7 @@ class PengarangController extends Controller
      */
     public function create()
     {
-        //
+        return view('pengarang.create');
     }
 
     /**
@@ -35,7 +36,12 @@ class PengarangController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $pengarang = new pengarang();
+        $pengarang->nama_pengarang = $request->nama;
+        $pengarang->email = $request->email;
+        $pengarang->tlp = $request->telepon;
+        $pengarang->save();
+        return redirect()->route('pengarang.index');
     }
 
     /**
